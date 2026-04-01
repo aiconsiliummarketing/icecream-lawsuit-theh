@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이스크림 개인정보 유출 집단소송 | 법무법인 더 에이치 황해</title>
+<meta name="description" content="법무법인 더 에이치 황해의 아이스크림미디어 개인정보 유출 사태 대응 집단소송 안내 및 접수 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #FFFFFF;
+  --off-white: #FAFAFA;
+  --gray-50: #F8F9FA;
+  --gray-100: #F1F3F5;
+  --gray-200: #E9ECEF;
+  --gray-300: #DEE2E6;
+  --gray-400: #ADB5BD;
+  --gray-500: #868E96;
+  --gray-600: #6C757D;
+  --gray-700: #495057;
+  --gray-800: #343A40;
+  --gray-900: #212529;
+  --black: #0A0A0A;
+  --accent: #1A1A2E;
+  --accent-blue: #2563EB;
+  --accent-blue-hover: #1D4ED8;
+  --accent-blue-light: #EFF6FF;
+  --danger: #DC2626;
+  --danger-light: #FEF2F2;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.1);
+  --transition: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s var(--transition);
+}
+
+.nav.scrolled {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 14px 48px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+.nav-logo {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  transition: color 0.4s var(--transition);
+}
+
+.nav.scrolled .nav-logo { color: var(--gray-900); }
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--white);
+  color: var(--gray-900);
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s var(--transition);
+}
+
+.nav.scrolled .nav-cta {
+  background: var(--gray-900);
+  color: var(--white);
+}
+
+.nav-cta:hover { transform: scale(1.03); }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+  opacity: 0.35;
+  transform: scale(1.05);
+  transition: transform 8s ease-out;
+}
+
+.hero.loaded .hero-bg { transform: scale(1); }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 840px;
+  padding: 0 24px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 100px;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  background: #EF4444;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6.5vw, 72px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  display: block;
+  background: linear-gradient(135deg, #60A5FA, #A78BFA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: clamp(16px, 2vw, 19px);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto 48px;
+  font-weight: 300;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 40px;
+  background: var(--white);
+  color: var(--gray-900);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s var(--transition);
+  letter-spacing: -0.01em;
+}
+
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,255,255,0.2); }
+
+.btn-primary svg { transition: transform 0.3s var(--transition); }
+.btn-primary:hover svg { transform: translateX(4px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 40px;
+  background: transparent;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s var(--transition);
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.4), transparent);
+  animation: scroll-down 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-6px); }
+}
+
+@keyframes scroll-down {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ===== SECTIONS COMMON ===== */
+section { padding: 140px 0; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-label-line {
+  width: 24px;
+  height: 1px;
+  background: var(--accent-blue);
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 17px;
+  color: var(--gray-600);
+  line-height: 1.75;
+  max-width: 640px;
+  font-weight: 300;
+}
+
+/* ===== OVERVIEW ===== */
+.overview { background: var(--white); }
+
+.overview-header { margin-bottom: 72px; }
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.overview-card {
+  position: relative;
+  padding: 40px 32px;
+  background: var(--gray-50);
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  transition: all 0.4s var(--transition);
+  overflow: hidden;
+}
+
+.overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), #A78BFA);
+  opacity: 0;
+  transition: opacity 0.4s var(--transition);
+}
+
+.overview-card:hover {
+  background: var(--white);
+  border-color: var(--gray-200);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.overview-card:hover::before { opacity: 1; }
+
+.card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.overview-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.overview-card p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ===== STATS ===== */
+.stats {
+  background: var(--gray-900);
+  padding: 80px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--gray-400);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* ===== NEWS ===== */
+.news { background: var(--off-white); }
+
+.news-header { margin-bottom: 64px; }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.news-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--gray-100);
+  transition: all 0.35s var(--transition);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-card:hover {
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.news-agency {
+  display: inline-flex;
+  padding: 4px 12px;
+  background: var(--gray-50);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-500);
+  width: fit-content;
+}
+
+.news-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-top: auto;
+}
+
+.news-link svg { transition: transform 0.3s var(--transition); }
+.news-card:hover .news-link svg { transform: translateX(4px); }
+
+/* ===== FAQ ===== */
+.faq { background: var(--white); }
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.faq-left { position: sticky; top: 120px; }
+
+.faq-list { display: flex; flex-direction: column; gap: 4px; }
+
+.faq-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.3s var(--transition);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 24px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-900);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: var(--radius-md);
+  transition: all 0.3s var(--transition);
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.faq-question:hover { background: var(--gray-50); }
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--gray-100);
+  transition: all 0.3s var(--transition);
+}
+
+.faq-item.active .faq-icon {
+  background: var(--gray-900);
+  transform: rotate(45deg);
+}
+
+.faq-item.active .faq-icon svg path { stroke: var(--white); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--transition), padding 0.3s var(--transition);
+}
+
+.faq-answer-inner {
+  padding: 0 24px 22px;
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ===== BOTTOM CTA ===== */
+.bottom-cta {
+  position: relative;
+  padding: 160px 0;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.bottom-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+  opacity: 0.2;
+}
+
+.bottom-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,10,10,0.85), rgba(26,26,46,0.9));
+}
+
+.bottom-cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.bottom-cta h2 {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  white-space: pre-line;
+}
+
+.bottom-benefits {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.benefit-check {
+  width: 22px;
+  height: 22px;
+  background: rgba(37,99,235,0.2);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cta-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 56px;
+  background: var(--accent-blue);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s var(--transition);
+  letter-spacing: -0.01em;
+}
+
+.btn-cta-large:hover {
+  background: var(--accent-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(37,99,235,0.3);
+}
+
+/* ===== FORM SECTION ===== */
+.apply { background: var(--off-white); }
+
+.apply-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.apply-left {}
+
+.apply-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.trust-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-blue-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-text h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 2px;
+}
+
+.trust-text p {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 300;
+}
+
+.apply-form-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.form-desc {
+  font-size: 14px;
+  color: var(--gray-500);
+  margin-bottom: 36px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.form-group { margin-bottom: 20px; }
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 8px;
+}
+
+.form-label .required {
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 18px;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--gray-900);
+  transition: all 0.25s var(--transition);
+  outline: none;
+}
+
+.form-input::placeholder { color: var(--gray-400); font-weight: 300; }
+
+.form-input:focus {
+  border-color: var(--accent-blue);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 28px;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: var(--accent-blue);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.form-checkbox-label {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 18px;
+  background: var(--gray-900);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s var(--transition);
+  font-family: inherit;
+  letter-spacing: -0.01em;
+}
+
+.btn-submit:hover { background: var(--black); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.btn-submit:disabled { background: var(--gray-300); cursor: not-allowed; transform: none; box-shadow: none; }
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-success.show { display: block; }
+.form-fields.hide { display: none; }
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: #ECFDF5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.form-success h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.form-success p {
+  font-size: 15px;
+  color: var(--gray-500);
+  font-weight: 300;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--gray-900);
+  padding: 64px 0 40px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 32px;
+}
+
+.footer-brand {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-info span {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 300;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: var(--gray-400);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+.footer-bottom {
+  font-size: 12px;
+  color: var(--gray-600);
+  font-weight: 300;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); }
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+  .faq-layout { grid-template-columns: 1fr; gap: 48px; }
+  .faq-left { position: static; }
+  .apply-layout { grid-template-columns: 1fr; gap: 48px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 16px 20px; }
+  .nav.scrolled { padding: 12px 20px; }
+  section { padding: 100px 0; }
+  .overview-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .hero-cta-group { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
+  .bottom-benefits { flex-direction: column; align-items: center; }
+  .apply-form-card { padding: 32px 24px; }
+  .footer-top { flex-direction: column; gap: 32px; }
+}
+
+@media (max-width: 480px) {
+  .stat-number { font-size: 32px; }
+  .btn-cta-large { padding: 18px 40px; font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">법무법인 더 에이치 황해</div>
+  <a href="#apply" class="nav-cta">소송 참여 접수 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      집단소송 접수 진행 중
+    </div>
+    <h1>
+      아이스크림 개인정보 유출
+      <span>집단소송으로 배상받으세요.</span>
+    </h1>
+    <p class="hero-desc">전국 초등학교 95%가 사용하는 교육 플랫폼에서 이름, 연락처, 학교 정보까지 유출. 법무법인 더 에이치 황해가 피해자 손해배상 소송을 진행합니다.</p>
+    <div class="hero-cta-group">
+      <a href="#apply" class="btn-primary">
+        지금 바로 접수하기
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 8h14M9 2l6 6-6 6"/></svg>
+      </a>
+      <a href="#overview" class="btn-secondary">사건 자세히 보기</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-number" data-count="95">0%</div>
+        <div class="stat-label">전국 초등학교 사용률</div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="stat-number">2026.03.08</div>
+        <div class="stat-label">사건 발생일</div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="stat-number">5,000원~</div>
+        <div class="stat-label">참여 실비</div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="stat-number">3분</div>
+        <div class="stat-label">온라인 접수 소요</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="overview" id="overview">
+  <div class="container">
+    <div class="overview-header">
+      <div class="section-label reveal">
+        <span class="section-label-line"></span>
+        사건 개요
+      </div>
+      <h2 class="section-title reveal reveal-delay-1">어떤 정보가 유출되었나요?</h2>
+      <p class="section-desc reveal reveal-delay-2">2026년 3월 8일, 전국 초등학교 대부분이 사용하는 교육 플랫폼 아이스크림에서 교사와 학부모의 개인 식별정보와 학교 정보가 대규모로 유출되었습니다.</p>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-card reveal">
+        <div class="card-number">01</div>
+        <h3>사건 발생 및 인지</h3>
+        <p>2026년 3월 8일 내부 로그를 통해 대규모 정보 유출이 인지되었으며, 3일이 지난 3월 11일에야 공식 사과문이 게시되고 KISA에 신고되었습니다.</p>
+      </div>
+      <div class="overview-card reveal reveal-delay-1">
+        <div class="card-number">02</div>
+        <h3>전국 초등 95% 사용 플랫폼</h3>
+        <p>아이스크림SR은 전국 초등학교의 95% 이상이 활용하고 AI 디지털교과서 개발을 주도하는 핵심 에듀테크 플랫폼으로, 공교육 디지털 인프라의 심각한 취약성을 드러냈습니다.</p>
+      </div>
+      <div class="overview-card reveal reveal-delay-2">
+        <div class="card-number">03</div>
+        <h3>유출된 핵심 정보</h3>
+        <p>회원 아이디, 이름, 생년월일, 휴대전화 번호 등 '개인 식별정보'는 물론, 학교명, 학교 주소, 학교 연락처 등 '교원 및 학교 정보'가 통째로 빠져나갔습니다.</p>
+      </div>
+      <div class="overview-card reveal reveal-delay-3">
+        <div class="card-number">04</div>
+        <h3>2차 피해의 치명적 위험</h3>
+        <p>이름과 연락처에 근무지 정보가 결합되어 유출, 보이스피싱, 사칭, 악성 민원, 나아가 스토킹 등 치명적인 범죄로 직결될 수 있는 매우 위험한 상황입니다.</p>
+      </div>
+      <div class="overview-card reveal reveal-delay-4">
+        <div class="card-number">05</div>
+        <h3>교육계의 강력한 반발</h3>
+        <p>교사노동조합연맹 및 초등교사노조 등은 국민권익위원회에 민원을 접수하고 강력한 법적 대응에 나서고 있습니다.</p>
+      </div>
+      <div class="overview-card reveal reveal-delay-5">
+        <div class="card-number">06</div>
+        <h3>법무법인의 전문적 대응</h3>
+        <p>법무법인 더 에이치 황해는 다수의 개인정보 유출 집단소송 경험을 바탕으로, 피해자들의 실질적인 권리 구제를 위해 전담팀을 구성하여 대응하고 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section class="news" id="news">
+  <div class="container">
+    <div class="news-header">
+      <div class="section-label reveal">
+        <span class="section-label-line"></span>
+        관련 보도
+      </div>
+      <h2 class="section-title reveal reveal-delay-1">언론이 주목한 사건</h2>
+      <p class="section-desc reveal reveal-delay-2">아이스크림미디어 교사 개인정보 유출 사건에 대한 주요 언론의 보도입니다.</p>
+    </div>
+    <div class="news-grid">
+      <a href="https://www.joongang.co.kr/article/25411037" target="_blank" rel="noopener" class="news-card reveal">
+        <span class="news-agency">중앙일보</span>
+        <h3>교육기업 아이스크림미디어 "개인정보 유출, 폰번호·학교정보 포함"</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+      <a href="https://www.edpl.co.kr/news/articleView.html?idxno=20071" target="_blank" rel="noopener" class="news-card reveal reveal-delay-1">
+        <span class="news-agency">교육플러스</span>
+        <h3>아이스크림미디어 교사 개인정보 유출 사태 어디까지 번질까?</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+      <a href="https://www.junggi.co.kr/news/articleView.html?idxno=35719" target="_blank" rel="noopener" class="news-card reveal reveal-delay-2">
+        <span class="news-agency">중기이코노미</span>
+        <h3>아이스크림미디어, 개인정보 유출 '보안 사고' 발생</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+      <a href="https://www.educhang.co.kr/news/articleView.html?idxno=8614" target="_blank" rel="noopener" class="news-card reveal reveal-delay-3">
+        <span class="news-agency">교육언론[창]</span>
+        <h3>교사노조연맹 '아이스크림미디어 개인정보 유출'에 국민권익위 민원</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+      <a href="https://www.eduplusnews.com/news/articleView.html?idxno=18185" target="_blank" rel="noopener" class="news-card reveal reveal-delay-4">
+        <span class="news-agency">에듀플러스</span>
+        <h3>아이스크림미디어 개인정보 유출…교사·학교 정보 포함에 교육계 우려 확산</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+      <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003214203" target="_blank" rel="noopener" class="news-card reveal reveal-delay-5">
+        <span class="news-agency">오마이뉴스</span>
+        <h3>[단독] 교사 정보 대량 유출 뒤...'검찰사칭'·'담임사칭' 괴전화 제보 이어져</h3>
+        <span class="news-link">기사 보기 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-left">
+        <div class="section-label reveal">
+          <span class="section-label-line"></span>
+          FAQ
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">자주 묻는 질문</h2>
+        <p class="section-desc reveal reveal-delay-2">소송 참여 자격, 비용, 배상금 등 궁금한 점을 정리했습니다.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            아이스크림미디어 개인정보 유출 사건의 핵심은 무엇인가요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">2026년 3월, 전국 초등학교 교사 및 회원의 이름, 연락처, 학교 정보 등 민감한 개인정보가 대규모로 유출된 사건입니다. 특히 근무지인 학교 정보가 결합되어 유출됨으로써 스토킹, 보이스피싱 등 심각한 2차 피해 우려가 제기되고 있습니다.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            집단소송에 참여하면 어떤 보상을 받을 수 있나요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">개인정보보호법 위반에 따른 정신적 위자료(10~30만원 수준) 및 실제 발생한 2차 피해에 대한 손해배상을 청구할 수 있습니다. 법무법인 더 에이치 황해는 피해자들의 권리 구제를 위해 최선을 다하고 있습니다.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            소송 비용과 기간은 어떻게 되나요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">소송 비용은 참여 인원에 따라 5,000원~10,000원 내외의 실비 수준으로 책정될 예정입니다. 소송 기간은 대규모 집단소송의 특성상 1심 판결까지 약 1~2년 정도 소요될 수 있습니다.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            유출 여부를 어떻게 확인하나요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">아이스크림미디어 측에서 발송한 유출 통지 안내 문자나 이메일을 통해 확인 가능하며, 홈페이지 내 '개인정보 유출 확인' 메뉴를 통해서도 확인하실 수 있습니다.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            교사 외에 일반 회원도 참여 가능한가요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">네, 아이스크림미디어 서비스를 이용하다 개인정보가 유출된 학부모, 학생 등 모든 일반 회원도 소송 참여가 가능합니다.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-5">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            소송 참여 시 불이익은 없나요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">헌법상 보장된 재판청구권을 행사하는 것이므로 어떠한 법적, 행정적 불이익도 발생하지 않습니다. 오히려 정당한 권리를 행사함으로써 향후 유사 사고 재발 방지에 기여하게 됩니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="bottom-cta">
+  <div class="bottom-cta-bg"></div>
+  <div class="bottom-cta-overlay"></div>
+  <div class="container">
+    <div class="bottom-cta-content reveal">
+      <h2>아이스크림 개인정보 유출 피해
+지금 집단소송에 참여하세요</h2>
+      <div class="bottom-benefits">
+        <div class="benefit-item">
+          <span class="benefit-check"><svg width="14" height="14" fill="none" stroke="#2563EB" stroke-width="2.5"><path d="M2 7l4 4 6-7"/></svg></span>
+          온라인 3분 접수로 참여 완료
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-check"><svg width="14" height="14" fill="none" stroke="#2563EB" stroke-width="2.5"><path d="M2 7l4 4 6-7"/></svg></span>
+          진행 상황 카카오톡 순차 안내
+        </div>
+      </div>
+      <a href="#apply" class="btn-cta-large">
+        바로 접수하기
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 9h16M11 3l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Apply Form -->
+<section class="apply" id="apply">
+  <div class="container">
+    <div class="apply-layout">
+      <div class="apply-left">
+        <div class="section-label reveal">
+          <span class="section-label-line"></span>
+          접수하기
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">집단소송 참여 접수</h2>
+        <p class="section-desc reveal reveal-delay-2">아래 정보를 정확히 입력해 주시면, 전담 변호사가 확인 후 안내 연락을 드립니다.</p>
+        <div class="apply-trust">
+          <div class="trust-item reveal reveal-delay-3">
+            <div class="trust-icon">
+              <svg width="20" height="20" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M10 2l2.5 5 5.5.8-4 3.9.9 5.3L10 14.5 5.1 17l.9-5.3-4-3.9 5.5-.8z"/></svg>
+            </div>
+            <div class="trust-text">
+              <h4>전문 변호사 전담팀 운영</h4>
+              <p>개인정보 유출 소송 전문 경험 보유</p>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-delay-4">
+            <div class="trust-icon">
+              <svg width="20" height="20" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M10 18a8 8 0 100-16 8 8 0 000 16z"/><path d="M7 10l2 2 4-4"/></svg>
+            </div>
+            <div class="trust-text">
+              <h4>소송 비용 최소화</h4>
+              <p>5,000원~10,000원 내외 실비 수준</p>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-delay-5">
+            <div class="trust-icon">
+              <svg width="20" height="20" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M17 10V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h5"/><path d="M13 17l2 2 4-4"/></svg>
+            </div>
+            <div class="trust-text">
+              <h4>카카오톡 진행 상황 안내</h4>
+              <p>접수부터 판결까지 투명한 소통</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="apply-form-card reveal">
+        <div class="form-fields" id="formFields">
+          <div class="form-title">참여 접수</div>
+          <div class="form-desc">필수 항목을 빠짐없이 입력해 주세요.</div>
+          <form id="applyForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">성명 <span class="required">*</span></label>
+              <input type="text" class="form-input" id="name" placeholder="홍길동" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">휴대전화 번호 <span class="required">*</span></label>
+              <input type="tel" class="form-input" id="phone" placeholder="010-0000-0000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">학교명 <span class="required">*</span></label>
+              <input type="text" class="form-input" id="school" placeholder="OO초등학교" required>
+            </div>
+            <label class="form-checkbox">
+              <input type="checkbox" id="consent" required>
+              <span class="form-checkbox-label">[필수] 개인정보 수집 및 이용, 법률 상담을 위한 정보 제공에 동의합니다.</span>
+            </label>
+            <button type="submit" class="btn-submit" id="submitBtn">접수 완료하기</button>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">
+            <svg width="28" height="28" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M6 14l6 6 10-12"/></svg>
+          </div>
+          <h3>접수가 완료되었습니다</h3>
+          <p>담당 변호사가 확인 후 신속하게 안내 연락을 드리겠습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">법무법인 더 에이치 황해</div>
+        <div class="footer-info">
+          <span>인천광역시 미추홀구 학익소로 60, 제 1~6층(학익동, 반도빌딩)</span>
+          <span>대표 천상현 | 사업자등록번호 121-81-78634</span>
+          <span>Tel. 032-251-1000 | Email. theh1000@lfthe-h.com</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 법무법인 더 에이치 황해. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Hero load animation
+window.addEventListener('load', () => {
+  document.querySelector('.hero').classList.add('loaded');
+});
+
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// FAQ toggle
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-answer');
+  const isActive = item.classList.contains('active');
+
+  // Close all
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('active');
+    i.querySelector('.faq-answer').style.maxHeight = '0';
+  });
+
+  // Open clicked if it was closed
+  if (!isActive) {
+    item.classList.add('active');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+// Form submit
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '접수 중...';
+
+  setTimeout(() => {
+    document.getElementById('formFields').classList.add('hide');
+    document.getElementById('formSuccess').classList.add('show');
+  }, 1200);
+}
+
+// Phone format
+document.getElementById('phone').addEventListener('input', function(e) {
+  let v = e.target.value.replace(/\D/g, '');
+  if (v.length > 3 && v.length <= 7) v = v.slice(0,3) + '-' + v.slice(3);
+  else if (v.length > 7) v = v.slice(0,3) + '-' + v.slice(3,7) + '-' + v.slice(7,11);
+  e.target.value = v;
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
