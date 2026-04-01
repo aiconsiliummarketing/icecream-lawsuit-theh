@@ -82,7 +82,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--gray-900);
   transition: color 0.4s var(--transition);
   flex-shrink: 0;
   margin-right: 12px;
@@ -96,8 +96,8 @@ body {
   align-items: center;
   gap: 8px;
   padding: 10px 24px;
-  background: var(--white);
-  color: var(--gray-900);
+  background: var(--gray-900);
+  color: var(--white);
   font-size: 14px;
   font-weight: 600;
   border: none;
@@ -126,12 +126,12 @@ body {
   background: var(--black);
 }
 
-/* [수정6] hero 배경 이미지 교체 - 보안 침해/사이버 보안 콘셉트 */
+/* [수정] hero 배경 - 아이스크림미디어 브랜드 오렌지(#F57C1F) 그라데이션 */
 .hero-bg {
   position: absolute;
   inset: 0;
   background: url('https://images.unsplash.com/photo-1563986768609-322da13575f2?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
-  opacity: 0.3;
+  opacity: 0.2;
   transform: scale(1.05);
   transition: transform 8s ease-out;
 }
@@ -141,7 +141,13 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.75) 100%);
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,245,235,0.85) 15%,
+    rgba(245,124,31,0.45) 50%,
+    rgba(200,80,10,0.75) 80%,
+    rgba(60,20,0,0.9) 100%
+  );
 }
 
 .hero-content {
@@ -159,12 +165,12 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(245,124,31,0.12);
+  border: 1px solid rgba(245,124,31,0.25);
   border-radius: 100px;
-  color: rgba(255,255,255,0.8);
+  color: var(--gray-800);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   margin-bottom: 32px;
   backdrop-filter: blur(10px);
@@ -183,11 +189,11 @@ body {
   50% { opacity: 0.4; }
 }
 
-/* [수정1] hero h1 - 폰트 크기 축소, line-height/max-width 조정 */
+/* hero h1 - 그라데이션 배경에 맞춘 텍스트 색상 */
 .hero h1 {
   font-size: clamp(28px, 4.8vw, 62px);
   font-weight: 800;
-  color: var(--white);
+  color: var(--gray-900);
   line-height: 1.25;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
@@ -199,20 +205,17 @@ body {
 
 .hero h1 span {
   display: block;
-  background: linear-gradient(135deg, #60A5FA, #A78BFA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #C85A0A;
   word-break: keep-all;
 }
 
 .hero-desc {
   font-size: clamp(15px, 1.8vw, 19px);
-  color: rgba(255,255,255,0.7);
+  color: var(--gray-700);
   line-height: 1.75;
   max-width: 640px;
   margin: 0 auto 48px;
-  font-weight: 300;
+  font-weight: 400;
   word-break: keep-all;
 }
 
@@ -228,8 +231,8 @@ body {
   align-items: center;
   gap: 10px;
   padding: 18px 40px;
-  background: var(--white);
-  color: var(--gray-900);
+  background: var(--gray-900);
+  color: var(--white);
   font-size: 16px;
   font-weight: 700;
   border: none;
@@ -240,7 +243,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,255,255,0.2); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
 .btn-primary svg { transition: transform 0.3s var(--transition); }
 .btn-primary:hover svg { transform: translateX(4px); }
 
@@ -250,17 +253,17 @@ body {
   gap: 8px;
   padding: 18px 40px;
   background: transparent;
-  color: var(--white);
+  color: var(--gray-800);
   font-size: 16px;
   font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid var(--gray-300);
   border-radius: 100px;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.35s var(--transition);
 }
 
-.btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+.btn-secondary:hover { background: rgba(0,0,0,0.04); border-color: var(--gray-500); }
 
 .hero-scroll {
   position: absolute;
@@ -272,7 +275,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.7);
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -282,7 +285,7 @@ body {
 .scroll-line {
   width: 1px;
   height: 40px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), transparent);
   animation: scroll-down 2s ease-in-out infinite;
 }
 
@@ -1256,11 +1259,11 @@ section { padding: 140px 0; }
         <!-- FAQ 5 -->
         <div class="faq-item reveal reveal-delay-5">
           <button class="faq-question" onclick="toggleFaq(this)">
-            교사 외에 일반 회원도 참여 가능한가요?
+            교사 외에 학부모도 참여 가능한가요?
             <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">네, 아이스크림미디어 서비스를 이용하다 개인정보가 유출된 학부모, 학생 등 모든 일반 회원도 소송 참여가 가능합니다.</div>
+            <div class="faq-answer-inner">아이스크림미디어 서비스를 이용하다 개인정보가 유출된 교사 및 학부모는 소송 참여가 가능합니다. 다만 학생은 직접적인 소송 참여가 불가하며, 학부모(법정대리인)를 통해 참여하실 수 있습니다.</div>
           </div>
         </div>
         <!-- FAQ 6 -->
@@ -1374,6 +1377,7 @@ section { padding: 140px 0; }
               <div class="other-input-wrapper" id="otherInputWrapper">
                 <input type="text" class="form-input" id="participantOther" placeholder="직접 입력해 주세요">
               </div>
+              <p class="form-notice" id="studentNotice" style="display:none; margin-top:8px; font-size:13px; color:var(--danger); font-weight:500;">* 학생은 직접 참여가 불가합니다. 학부모(법정대리인)를 통해 접수해 주세요.</p>
             </div>
             <label class="form-checkbox">
               <input type="checkbox" id="consent" required>
@@ -1455,11 +1459,13 @@ function toggleFaq(btn) {
   }
 }
 
-// [수정5] 참여자 드롭다운 - 기타 선택 시 입력창 노출
+// 참여자 드롭다운 - 기타 선택 시 입력창 노출 + 학생 참여 불가 안내
 function handleParticipantChange(select) {
   const wrapper = document.getElementById('otherInputWrapper');
   const otherInput = document.getElementById('participantOther');
+  const notice = document.getElementById('studentNotice');
 
+  // 기타 입력창
   if (select.value === '기타') {
     wrapper.classList.add('show');
     otherInput.setAttribute('required', 'required');
@@ -1469,6 +1475,9 @@ function handleParticipantChange(select) {
     otherInput.removeAttribute('required');
     otherInput.value = '';
   }
+
+  // 학생 참여 불가 안내 - 모든 선택에 표시 (참고용)
+  notice.style.display = 'block';
 }
 
 // [수정5] 폼 제출 - 참여자 유형 + 기타 입력값 포함
