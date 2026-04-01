@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>아이스크림 개인정보 유출 집단소송 | 법무법인 더 에이치 황해</title>
+<!-- [수정7] title에 "아이스크림미디어"로 통일 -->
+<title>아이스크림미디어 개인정보 유출 집단소송 | 법무법인 더 에이치 황해</title>
 <meta name="description" content="법무법인 더 에이치 황해의 아이스크림미디어 개인정보 유출 사태 대응 집단소송 안내 및 접수 페이지">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,6 +105,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s var(--transition);
+  flex-shrink: 0;
 }
 
 .nav.scrolled .nav-cta {
@@ -124,11 +126,12 @@ body {
   background: var(--black);
 }
 
+/* [수정6] hero 배경 이미지 교체 - 보안 침해/사이버 보안 콘셉트 */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
-  opacity: 0.35;
+  background: url('https://images.unsplash.com/photo-1563986768609-322da13575f2?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+  opacity: 0.3;
   transform: scale(1.05);
   transition: transform 8s ease-out;
 }
@@ -138,14 +141,15 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.7) 100%);
+  background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.75) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 840px;
+  /* [수정1] max-width 확장하여 2줄 이내 유지 */
+  max-width: 900px;
   padding: 80px 32px 0;
   width: 100%;
 }
@@ -179,14 +183,18 @@ body {
   50% { opacity: 0.4; }
 }
 
+/* [수정1] hero h1 - 폰트 크기 축소, line-height/max-width 조정 */
 .hero h1 {
-  font-size: clamp(32px, 5.5vw, 72px);
+  font-size: clamp(28px, 4.8vw, 62px);
   font-weight: 800;
   color: var(--white);
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
   word-break: keep-all;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h1 span {
@@ -202,7 +210,7 @@ body {
   font-size: clamp(15px, 1.8vw, 19px);
   color: rgba(255,255,255,0.7);
   line-height: 1.75;
-  max-width: 620px;
+  max-width: 640px;
   margin: 0 auto 48px;
   font-weight: 300;
   word-break: keep-all;
@@ -233,7 +241,6 @@ body {
 }
 
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,255,255,0.2); }
-
 .btn-primary svg { transition: transform 0.3s var(--transition); }
 .btn-primary:hover svg { transform: translateX(4px); }
 
@@ -339,7 +346,6 @@ section { padding: 140px 0; }
 
 /* ===== OVERVIEW ===== */
 .overview { background: var(--white); }
-
 .overview-header { margin-bottom: 72px; }
 
 .overview-grid {
@@ -361,9 +367,7 @@ section { padding: 140px 0; }
 .overview-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--accent-blue), #A78BFA);
   opacity: 0;
@@ -442,7 +446,6 @@ section { padding: 140px 0; }
 
 /* ===== NEWS ===== */
 .news { background: var(--off-white); }
-
 .news-header { margin-bottom: 64px; }
 
 .news-grid {
@@ -513,7 +516,6 @@ section { padding: 140px 0; }
 }
 
 .faq-left { position: sticky; top: 120px; }
-
 .faq-list { display: flex; flex-direction: column; gap: 4px; }
 
 .faq-item {
@@ -605,12 +607,12 @@ section { padding: 140px 0; }
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
 .bottom-cta h2 {
-  font-size: clamp(26px, 4vw, 52px);
+  font-size: clamp(26px, 4vw, 48px);
   font-weight: 800;
   color: var(--white);
   line-height: 1.3;
@@ -679,8 +681,6 @@ section { padding: 140px 0; }
   gap: 80px;
   align-items: center;
 }
-
-.apply-left {}
 
 .apply-trust {
   display: flex;
@@ -758,7 +758,8 @@ section { padding: 140px 0; }
   margin-left: 2px;
 }
 
-.form-input {
+.form-input,
+.form-select {
   width: 100%;
   padding: 16px 18px;
   background: var(--gray-50);
@@ -769,14 +770,51 @@ section { padding: 140px 0; }
   color: var(--gray-900);
   transition: all 0.25s var(--transition);
   outline: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .form-input::placeholder { color: var(--gray-400); font-weight: 300; }
 
-.form-input:focus {
+.form-input:focus,
+.form-select:focus {
   border-color: var(--accent-blue);
   background: var(--white);
   box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
+}
+
+/* [수정5] 드롭다운 커스텀 화살표 */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--gray-500);
+  pointer-events: none;
+}
+
+.form-select { cursor: pointer; padding-right: 44px; }
+
+/* [수정5] 기타 입력창 조건부 노출 */
+.other-input-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s var(--transition), margin 0.35s var(--transition);
+  margin-top: 0;
+}
+
+.other-input-wrapper.show {
+  max-height: 80px;
+  margin-top: 12px;
 }
 
 .form-checkbox {
@@ -929,6 +967,7 @@ section { padding: 140px 0; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -950,7 +989,8 @@ section { padding: 140px 0; }
   .container { padding: 0 20px; }
 
   .hero-content { padding: 70px 20px 0; }
-  .hero h1 { font-size: clamp(28px, 8vw, 48px); }
+  /* [수정1] 모바일에서 hero h1 크기 조정 - 2줄 이내 유지 */
+  .hero h1 { font-size: clamp(24px, 7vw, 42px); line-height: 1.3; }
   .hero-desc { font-size: 15px; }
   .hero-cta-group { flex-direction: column; align-items: stretch; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
@@ -967,7 +1007,7 @@ section { padding: 140px 0; }
   .news-grid { grid-template-columns: 1fr; }
 
   .faq-question { font-size: 15px; padding: 18px 20px; }
-  .faq-answer-inner { padding: 0 20px 18px; }
+  .faq-answer-inner { padding: 0 20px 18px; font-size: 14px; }
 
   .bottom-cta { padding: 100px 0; }
   .bottom-benefits { flex-direction: column; align-items: center; gap: 16px; }
@@ -981,7 +1021,7 @@ section { padding: 140px 0; }
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: clamp(26px, 7.5vw, 40px); line-height: 1.25; }
+  .hero h1 { font-size: clamp(22px, 6.5vw, 36px); line-height: 1.3; }
   .hero-badge { font-size: 12px; padding: 7px 16px; }
   .section-title { font-size: clamp(22px, 6vw, 32px); }
   .stat-number { font-size: 26px; }
@@ -1001,6 +1041,7 @@ section { padding: 140px 0; }
 
 <!-- Hero -->
 <section class="hero" id="hero">
+  <!-- [수정6] hero 배경 이미지 교체 -->
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1008,11 +1049,13 @@ section { padding: 140px 0; }
       <span class="hero-badge-dot"></span>
       집단소송 접수 진행 중
     </div>
+    <!-- [수정1] 히어로 카피 수정: "아이스크림미디어 개인정보 유출," / "집단소송으로 배상받으세요." -->
     <h1>
-      아이스크림 개인정보 유출
+      아이스크림미디어 개인정보 유출,
       <span>집단소송으로 배상받으세요.</span>
     </h1>
-    <p class="hero-desc">전국 초등학교 95%가 사용하는 교육 플랫폼에서 이름, 연락처, 학교 정보까지 유출. 법무법인 더 에이치 황해가 피해자 손해배상 소송을 진행합니다.</p>
+    <!-- [수정7] hero 설명문에서도 "아이스크림미디어"로 통일 -->
+    <p class="hero-desc">전국 초등학교 95%가 사용하는 교육 플랫폼 아이스크림미디어에서 이름, 연락처, 학교 정보까지 유출. 법무법인 더 에이치 황해가 피해자 손해배상 소송을 진행합니다.</p>
     <div class="hero-cta-group">
       <a href="#apply" class="btn-primary">
         지금 바로 접수하기
@@ -1032,7 +1075,8 @@ section { padding: 140px 0; }
   <div class="container">
     <div class="stats-grid">
       <div class="reveal">
-        <div class="stat-number" data-count="95">0%</div>
+        <!-- [수정2] "0%" → "95%" -->
+        <div class="stat-number">95%</div>
         <div class="stat-label">전국 초등학교 사용률</div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -1040,8 +1084,9 @@ section { padding: 140px 0; }
         <div class="stat-label">사건 발생일</div>
       </div>
       <div class="reveal reveal-delay-2">
+        <!-- [수정3] "참여 실비" → "소송 비용" -->
         <div class="stat-number">5,000원~</div>
-        <div class="stat-label">참여 실비</div>
+        <div class="stat-label">소송 비용</div>
       </div>
       <div class="reveal reveal-delay-3">
         <div class="stat-number">3분</div>
@@ -1059,8 +1104,9 @@ section { padding: 140px 0; }
         <span class="section-label-line"></span>
         사건 개요
       </div>
+      <!-- [수정7] 섹션 제목/설명 "아이스크림미디어" 통일 -->
       <h2 class="section-title reveal reveal-delay-1">어떤 정보가 유출되었나요?</h2>
-      <p class="section-desc reveal reveal-delay-2">2026년 3월 8일, 전국 초등학교 대부분이 사용하는 교육 플랫폼 아이스크림에서 교사와 학부모의 개인 식별정보와 학교 정보가 대규모로 유출되었습니다.</p>
+      <p class="section-desc reveal reveal-delay-2">2026년 3월 8일, 전국 초등학교 대부분이 사용하는 교육 플랫폼 아이스크림미디어에서 교사와 학부모의 개인 식별정보와 학교 정보가 대규모로 유출되었습니다.</p>
     </div>
     <div class="overview-grid">
       <div class="overview-card reveal">
@@ -1153,9 +1199,11 @@ section { padding: 140px 0; }
           FAQ
         </div>
         <h2 class="section-title reveal reveal-delay-1">자주 묻는 질문</h2>
-        <p class="section-desc reveal reveal-delay-2">소송 참여 자격, 비용, 배상금 등 궁금한 점을 정리했습니다.</p>
+        <!-- [수정3] "비용" 표현 통일 -->
+        <p class="section-desc reveal reveal-delay-2">소송 참여 자격, 소송 비용, 배상금 등 궁금한 점을 정리했습니다.</p>
       </div>
       <div class="faq-list">
+        <!-- FAQ 1 -->
         <div class="faq-item reveal">
           <button class="faq-question" onclick="toggleFaq(this)">
             아이스크림미디어 개인정보 유출 사건의 핵심은 무엇인가요?
@@ -1165,6 +1213,7 @@ section { padding: 140px 0; }
             <div class="faq-answer-inner">2026년 3월, 전국 초등학교 교사 및 회원의 이름, 연락처, 학교 정보 등 민감한 개인정보가 대규모로 유출된 사건입니다. 특히 근무지인 학교 정보가 결합되어 유출됨으로써 스토킹, 보이스피싱 등 심각한 2차 피해 우려가 제기되고 있습니다.</div>
           </div>
         </div>
+        <!-- FAQ 2 -->
         <div class="faq-item reveal reveal-delay-1">
           <button class="faq-question" onclick="toggleFaq(this)">
             집단소송에 참여하면 어떤 보상을 받을 수 있나요?
@@ -1174,15 +1223,17 @@ section { padding: 140px 0; }
             <div class="faq-answer-inner">개인정보보호법 위반에 따른 정신적 위자료(10~30만원 수준) 및 실제 발생한 2차 피해에 대한 손해배상을 청구할 수 있습니다. 법무법인 더 에이치 황해는 피해자들의 권리 구제를 위해 최선을 다하고 있습니다.</div>
           </div>
         </div>
+        <!-- FAQ 3 [수정3] 소송 비용 워딩 통일 -->
         <div class="faq-item reveal reveal-delay-2">
           <button class="faq-question" onclick="toggleFaq(this)">
             소송 비용과 기간은 어떻게 되나요?
             <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">소송 비용은 참여 인원에 따라 5,000원~10,000원 내외의 실비 수준으로 책정될 예정입니다. 소송 기간은 대규모 집단소송의 특성상 1심 판결까지 약 1~2년 정도 소요될 수 있습니다.</div>
+            <div class="faq-answer-inner">소송 비용은 5,000~10,000원으로 책정될 예정입니다. 참여 인원에 따라 최종 비용은 달라질 수 있습니다. 소송 기간은 대규모 집단소송의 특성상 1심 판결까지 약 1~2년 정도 소요될 수 있습니다.</div>
           </div>
         </div>
+        <!-- FAQ 4 -->
         <div class="faq-item reveal reveal-delay-3">
           <button class="faq-question" onclick="toggleFaq(this)">
             유출 여부를 어떻게 확인하나요?
@@ -1192,7 +1243,18 @@ section { padding: 140px 0; }
             <div class="faq-answer-inner">아이스크림미디어 측에서 발송한 유출 통지 안내 문자나 이메일을 통해 확인 가능하며, 홈페이지 내 '개인정보 유출 확인' 메뉴를 통해서도 확인하실 수 있습니다.</div>
           </div>
         </div>
+        <!-- [수정4] FAQ 추가: "어떤 자료를 준비하면 되나요?" - 유출 여부 확인 질문 바로 다음 -->
         <div class="faq-item reveal reveal-delay-4">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            어떤 자료를 준비하면 되나요?
+            <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">아이스크림미디어에서 받은 개인정보 유출 안내 문자나 이메일을 캡처해 두시거나, 아이스크림미디어 고객센터 또는 유출 여부 확인 화면에서 본인의 개인정보 유출 사실을 조회한 뒤 해당 화면을 캡처해 두시면 됩니다. 접수 이후 추가 안내에 따라 제출하실 수 있습니다.</div>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal reveal-delay-5">
           <button class="faq-question" onclick="toggleFaq(this)">
             교사 외에 일반 회원도 참여 가능한가요?
             <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
@@ -1201,7 +1263,8 @@ section { padding: 140px 0; }
             <div class="faq-answer-inner">네, 아이스크림미디어 서비스를 이용하다 개인정보가 유출된 학부모, 학생 등 모든 일반 회원도 소송 참여가 가능합니다.</div>
           </div>
         </div>
-        <div class="faq-item reveal reveal-delay-5">
+        <!-- FAQ 6 -->
+        <div class="faq-item reveal reveal-delay-6">
           <button class="faq-question" onclick="toggleFaq(this)">
             소송 참여 시 불이익은 없나요?
             <span class="faq-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 1v12M1 7h12"/></svg></span>
@@ -1221,7 +1284,8 @@ section { padding: 140px 0; }
   <div class="bottom-cta-overlay"></div>
   <div class="container">
     <div class="bottom-cta-content reveal">
-      <h2>아이스크림 개인정보 유출 피해
+      <!-- [수정7] "아이스크림" → "아이스크림미디어" -->
+      <h2>아이스크림미디어 개인정보 유출 피해
 지금 집단소송에 참여하세요</h2>
       <div class="bottom-benefits">
         <div class="benefit-item">
@@ -1267,8 +1331,9 @@ section { padding: 140px 0; }
               <svg width="20" height="20" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M10 18a8 8 0 100-16 8 8 0 000 16z"/><path d="M7 10l2 2 4-4"/></svg>
             </div>
             <div class="trust-text">
+              <!-- [수정3] "실비 수준" → "소송 비용" 기준 문구로 정리 -->
               <h4>소송 비용 최소화</h4>
-              <p>5,000원~10,000원 내외 실비 수준</p>
+              <p>5,000~10,000원으로 책정될 예정</p>
             </div>
           </div>
           <div class="trust-item reveal reveal-delay-5">
@@ -1295,9 +1360,20 @@ section { padding: 140px 0; }
               <label class="form-label">휴대전화 번호 <span class="required">*</span></label>
               <input type="tel" class="form-input" id="phone" placeholder="010-0000-0000" required>
             </div>
+            <!-- [수정5] "학교명" 삭제 → "참여자" 드롭다운(교사/학부모/기타) + 기타 조건부 입력 -->
             <div class="form-group">
-              <label class="form-label">학교명 <span class="required">*</span></label>
-              <input type="text" class="form-input" id="school" placeholder="OO초등학교" required>
+              <label class="form-label">참여자 <span class="required">*</span></label>
+              <div class="select-wrapper">
+                <select class="form-select" id="participantType" required onchange="handleParticipantChange(this)">
+                  <option value="" disabled selected>참여자 유형을 선택해 주세요</option>
+                  <option value="교사">교사</option>
+                  <option value="학부모">학부모</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+              <div class="other-input-wrapper" id="otherInputWrapper">
+                <input type="text" class="form-input" id="participantOther" placeholder="직접 입력해 주세요">
+              </div>
             </div>
             <label class="form-checkbox">
               <input type="checkbox" id="consent" required>
@@ -1360,7 +1436,6 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
 reveals.forEach(el => observer.observe(el));
 
 // FAQ toggle
@@ -1369,22 +1444,56 @@ function toggleFaq(btn) {
   const answer = item.querySelector('.faq-answer');
   const isActive = item.classList.contains('active');
 
-  // Close all
   document.querySelectorAll('.faq-item').forEach(i => {
     i.classList.remove('active');
     i.querySelector('.faq-answer').style.maxHeight = '0';
   });
 
-  // Open clicked if it was closed
   if (!isActive) {
     item.classList.add('active');
     answer.style.maxHeight = answer.scrollHeight + 'px';
   }
 }
 
-// Form submit
+// [수정5] 참여자 드롭다운 - 기타 선택 시 입력창 노출
+function handleParticipantChange(select) {
+  const wrapper = document.getElementById('otherInputWrapper');
+  const otherInput = document.getElementById('participantOther');
+
+  if (select.value === '기타') {
+    wrapper.classList.add('show');
+    otherInput.setAttribute('required', 'required');
+    otherInput.focus();
+  } else {
+    wrapper.classList.remove('show');
+    otherInput.removeAttribute('required');
+    otherInput.value = '';
+  }
+}
+
+// [수정5] 폼 제출 - 참여자 유형 + 기타 입력값 포함
 function handleSubmit(e) {
   e.preventDefault();
+
+  const participantType = document.getElementById('participantType').value;
+  const participantOther = document.getElementById('participantOther').value.trim();
+
+  // 기타 선택 시 입력 필수 검증
+  if (participantType === '기타' && !participantOther) {
+    document.getElementById('participantOther').focus();
+    return;
+  }
+
+  // 폼 데이터 수집
+  const formData = {
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phone').value,
+    participantType: participantType,
+    participantOther: participantType === '기타' ? participantOther : ''
+  };
+
+  console.log('접수 데이터:', formData);
+
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
   btn.textContent = '접수 중...';
@@ -1403,7 +1512,7 @@ document.getElementById('phone').addEventListener('input', function(e) {
   e.target.value = v;
 });
 
-// Smooth scroll for anchor links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
